@@ -42,3 +42,6 @@ img {
     margin: 10px;
     border: 2px solid red;
 }
+.img {
+    border-radius: 15px;
+}
