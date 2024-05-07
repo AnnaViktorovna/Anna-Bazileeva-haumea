@@ -56,6 +56,7 @@ h2 {
     font-size: 32px;
     color: darkslategrey;
     font-weight: bold;
+    margin-left: 40px;
 }
 #name{
    
@@ -70,16 +71,16 @@ h2 {
 img {
     width: 100px;
 }
-#Connect{
+#connect{
     text-align: center;
 }
 
-#Connect ul li img{
+#connect ul li img{
    width: 30px;
    padding-bottom: 10px;
 }
 
-#Connect ul {
+#connect ul {
     list-style-type: none;
 }
 #Connect h2 {
@@ -87,13 +88,13 @@ img {
     align-items: center;
     justify-content: center;
 }
-#Connect ul li {
+#connect ul li {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
-#Skills{
+#skills{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -101,7 +102,7 @@ img {
     
 }
 
-#Skills ul li {
+#skills ul li {
     background-color: rgb(240, 239, 216);
     margin: 10px;
     border: 2px solid red;
@@ -119,21 +120,21 @@ section {
     padding-left: 20px;
 }
 
-#Experience {
+#experience {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
 }
 
-#Experience ul {
+#experience ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     align-items: flex-start;
     
 }
-#Experience ul li {
+#experience ul li {
     margin-bottom: 10px;
 }
 
@@ -147,5 +148,85 @@ section {
 footer {
     text-align: center;
     text-decoration: underline;
-    color: rgb(155, 143, 143);
+    color: rgb(148, 143, 155);
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 2fr 4fr 2fr;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-areas:
+        "experience experience experience"
+        "connect connect connect";
+}
+
+.grid > * {
+    border: solid 1px blue;
+}
+
+@media (min-width: 640px) and (max-width: 789px) {
+    .grid {
+        grid-template-columns: 2fr 4fr;
+        grid-template-areas:
+            "experience experience"
+            "connect connect";
+    }
+    .grid > * {
+        border: none;
+    }
+    header {
+        flex-wrap: wrap;
+        font-size: medium;
+        background-color: darkgreen;
+    }
+    header nav ul {
+        gap: 30px;
+    }
+    header nav li a {
+        font-size: 24px;
+    }
+
+    img {
+        display: none;
+    }
+    #name {
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    ul {
+        background-color: rgb(79, 47, 68);
+        font-style: italic;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 639px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "experience experience"
+            "connect connect";
+    }
+    img {
+        display: none;
+    }
+    #name {
+        font-size: small;
+        color: blue;
+    }
+    #experience {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-rows: auto;
+        align-items: center;
+        font-size: 16px;
+        grid-area: experience;
+        background-color: rgb(224, 255, 196);
+    }
+
+    header nav li a {
+        font-size: 26px;
+    }
 }
