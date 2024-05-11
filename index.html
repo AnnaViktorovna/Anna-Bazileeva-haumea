@@ -1,73 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Connect">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
-<main>
-    <h1 id="name">Anna Bazileeva</h1>
-    
-    <section id="Projects">
-    <h2>Projects</h2>
-    </section>
-  <section id="about">
-<h2>About</h2>
-<p>I don't finish a previous ganemede course. But I hope to finish haumea class and go forward.</p>
-<img src="./img/IMG_B9F461A8A800-1.jpeg" width="100px"/>
-</section>
-<section id="experience">
-<h2>Experience</h2>
-<div class="columns">
-<ul>
-    <li>2024</li>
-    <li>2022</li>
-    <li>2003</li>
-    <li>2000</li>
-</ul>
-<ul>
-    <li>TJMax</li>
-    <li>Scenthound</li>
-    <li>LLC Isaiko</li>
-    <li>LLC Kokhanovskiy</li>
-</ul>
-<ul>
-    <li>Backroom assosiate</li>
-    <li>Groomer</li>
-    <li>Assistent photographer</li>
-    <li>Assistent web developer</li>
-</ul>
-</div>
-</section>
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        
-    </ul>
-</section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Connect">Connect</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 id="name">Anna Bazileeva</h1>
 
-<section id="connect">
-<h2>Connect</h2>
-<ul>
-    <li><a href="mailto:anna.bazileeva@gmail.com"><img src="./img/gmail_icon-icons.com_59877.png" alt="gmail" ></a></li>
-    <li><a href="https://github.com/AnnaViktorovna"><img src="./img/github-mark.png" alt="github"></a></li>
-    <li><a href="https://www.linkedin.com/in/anna-bazileeva/"><img src="./img/317750_linkedin_icon.png" alt="linkedin" ></a></li>
-</ul>
- </section>
- </main>
- <script src="./js/index.js"></script>
-</body>
+            <section id="Projects">
+                <h2>Projects</h2>
+            </section>
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                    I don't finish a previous ganemede course. But I hope to
+                    finish haumea class and go forward.
+                </p>
+                <img src="./img/IMG_B9F461A8A800-1.jpeg" width="100px" />
+            </section>
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="columns">
+                    <ul>
+                        <li>2024</li>
+                        <li>2022</li>
+                        <li>2003</li>
+                        <li>2000</li>
+                    </ul>
+                    <ul>
+                        <li>TJMax</li>
+                        <li>Scenthound</li>
+                        <li>LLC Isaiko</li>
+                        <li>LLC Kokhanovskiy</li>
+                    </ul>
+                    <ul>
+                        <li>Backroom assosiate</li>
+                        <li>Groomer</li>
+                        <li>Assistent photographer</li>
+                        <li>Assistent web developer</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul></ul>
+            </section>
+
+            <section id="connect">
+                <h2>Connect</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:anna.bazileeva@gmail.com"
+                            ><img
+                                src="./img/gmail_icon-icons.com_59877.png"
+                                alt="gmail"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/AnnaViktorovna"
+                            ><img src="./img/github-mark.png" alt="github"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/anna-bazileeva/"
+                            ><img
+                                src="./img/317750_linkedin_icon.png"
+                                alt="linkedin"
+                        /></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <section>
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for="usersName">Name</label>
+                <input
+                    type="text"
+                    name="usersName"
+                    id="usersName"
+                    required="true"
+                />
+                <label for="usersEmail">Email</label>
+                <input
+                    type="email"
+                    name="usersEmail"
+                    id="usersEmail"
+                    required="true"
+                />
+                <label for="usersMessage">Message</label>
+                <textarea
+                    name="usersMessage"
+                    id="usersMessage"
+                    required="true"
+                ></textarea>
+                <button type="submit" value="submit" class="sbutton">
+                    Submit
+                </button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
+        <script src="./js/index.js"></script>
+    </body>
 </html>
