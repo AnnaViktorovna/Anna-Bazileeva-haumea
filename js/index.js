@@ -99,4 +99,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggleMessageSectionVisibility();
     });
+
+    const githubUsername = 'AnnaViktorovna';  
+    fetch(`https://api.github.com/users/${githubUsername}/repos`)
+        .then(response => response.json())
+        .then(repos => {
+            const projectSection = document.getElementById('projects'); 
+            if (!projectSection) {
+                console.error('The "projects" section does not exist in the DOM.');
+                return; 
+            }
+            const projectList = projectSection.querySelector('ul'); 
+            if (!projectList) {
+                console.error('No <ul> element found within the "projects" section.');
+                return; 
+            }
+            repos.forEach(repo => {
+                let project = document.createElement('li'); 
+                project.innerText = repo.name; 
+                projectList.appendChild(project); 
+            
+            } )
+            console.log('GitHub Repositories:', repos);
+        })
+        .catch(error => {
+            console.error('Error fetching GitHub repositories:', error);
+        });
+        
+        
 });
