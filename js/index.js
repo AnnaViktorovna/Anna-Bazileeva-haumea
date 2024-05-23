@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('checkbox').addEventListener('change', function() {
+        if(this.checked) {
+            document.body.classList.add("dark-mode");
+            document.querySelector('nav').classList.add("dark-mode");
+            document.querySelector('.theme-switch').classList.add("dark-mode");
+        } else {
+            document.body.classList.remove("dark-mode");
+            document.querySelector('nav').classList.remove("dark-mode");
+            document.querySelector('.theme-switch').classList.remove("dark-mode");
+        }
+    });
+
     const footer = document.createElement("footer");
 
     let today = new Date();
@@ -116,7 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             repos.forEach(repo => {
                 let project = document.createElement('li'); 
-                project.innerText = repo.name; 
+                let projectLink = document.createElement('a');
+                
+                projectLink.href = repo.html_url;
+                projectLink.target = "_blank";
+                projectLink.textContent = repo.name;
+                project.appendChild(projectLink);
                 projectList.appendChild(project); 
             
             } )

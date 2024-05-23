@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-* {
+body {
     background-color: rgb(185, 234, 236);
-    color: rgb(36, 6, 65);
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -12,47 +13,120 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(9, 116, 119);
-    z-index: 999;
+    background-color: rgb(110, 227, 232);
+    
     height: 160px;
     padding: 10px 0;
 }
 
 header nav {
     background-color: rgb(9, 116, 119);
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 header nav ul {
     display: flex;
     flex-direction: row;
     background-color: rgb(9, 116, 119);
-    list-style-type: none;
+    margin: 0;
+    padding: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 70px;
 }
 
 header nav li {
     font-size: medium;
     font-style: italic;
-
+    list-style: none;
     margin-bottom: 10px;
     align-items: center;
     justify-content: center;
 }
 header nav li a {
+    display: block;
+    padding: 15px 20px;
+    text-transform: uppercase;
     text-decoration: none;
-    color: indigo;
+    color: rgb(255, 255, 255);
     background-color: rgb(9, 116, 119);
     font-size: 34px;
-    list-style: none;
+    
 }
 
 header nav li a:hover {
     color: blue;
 }
 
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+input#menu-toggle {
+    display: none;
+}
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    background-color: rgb(44, 23, 109);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 2px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+}
+.slider.dark-mode.round::before
+{
+ background-color: white;
+}
+
+input:checked + .slider {
+    background-color: #f3e8e8;
+}
+
+input:checked + .slider:before {
+    transform: translateX(6px);
+}
+
+
 h2 {
-    font-size: 32px;
+    font-size: 26px;
     color: darkslategrey;
     font-weight: bold;
     margin-left: 40px;
@@ -102,9 +176,12 @@ img {
 #skills ul li {
     background-color: rgb(240, 239, 216);
     margin: 10px;
-    border: 2px solid red;
+    border: 2px solid chocolate;
     margin-bottom: 25px;
     list-style-type: none;
+    padding: 10px;
+    color: darkslategrey;
+    text-align: center;
 }
 .img {
     border-radius: 15px;
@@ -117,6 +194,13 @@ section {
     padding-left: 20px;
 }
 
+#projects ul {
+    text-decoration: none;
+}
+#projects ul li {
+    padding-bottom: 20px;
+    list-style-type: none;
+}
 #experience {
     display: flex;
     flex-direction: column;
@@ -182,15 +266,30 @@ label {
 .sbutton,
 button {
     border-radius: 3px;
-    height: 27px;
+    height: 37px;
     background-color: aquamarine;
     font-size: medium;
     color: darkblue;
     font-style: italic;
     margin-left: 17px;
 }
-.sbutton:hover {
-    color: blue;
+button, .sbutton:hover {
+    background-color: rgb(23, 23, 128);
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+header nav.dark-mode {
+    background-color: #040404;
+}
+
+.theme-switch.dark-mode .slider::before {
+    background-color: white(241, 234, 234);
+
 }
 
 @media (min-width: 640px) and (max-width: 789px) {
@@ -207,6 +306,7 @@ button {
         flex-wrap: wrap;
         font-size: medium;
         background-color: darkgreen;
+        margin: 10px;
     }
     header nav ul {
         gap: 30px;
@@ -228,6 +328,7 @@ button {
         font-style: italic;
         padding: 14px;
     }
+
 }
 
 @media (max-width: 639px) {
@@ -254,7 +355,26 @@ button {
         background-color: rgb(224, 255, 196);
     }
 
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
     header nav li a {
         font-size: 26px;
     }
+
+    input#menu-toggle:checked + .menu-icon + .header nav ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
 }
+
+
+
