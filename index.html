@@ -4,15 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
     <body>
         <header>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">&#9435;</label>
             <!-- navigation -->
             <nav>
-                <ul>
+                <ul id="nav-list">
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -21,7 +25,7 @@
                     <li><a href="#connect">Connect</a></li>
                 </ul>
             </nav>
-            <!--switch therm-->
+            <!--switch theme-->
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
                     <input type="checkbox" id="checkbox" />
@@ -40,12 +44,16 @@
                     haven't finish a previous Ganemede course. But I hope to
                     finish Haumea class and go forward to react course.
                 </p>
-                <img src="./img/IMG_B9F461A8A800-1.jpeg" width="100px" />
+                <img
+                    src="./img/IMG_B9F461A8A800-1.jpeg"
+                    width="100px"
+                    alt="picture"
+                />
             </section>
 
             <section id="projects">
                 <h2>Projects</h2>
-                <ul></ul>
+                <ul class="project-list"></ul>
             </section>
 
             <!-- experience -->
@@ -88,27 +96,33 @@
             <section id="leaveMessage">
                 <h2>Leave a Message</h2>
 
-                <form name="leave_message">
-                    <label for="usersName">Name</label>
-                    <input
-                        type="text"
-                        name="usersName"
-                        id="usersName"
-                        required
-                    />
-                    <label for="usersEmail">Email</label>
-                    <input
-                        type="email"
-                        name="usersEmail"
-                        id="usersEmail"
-                        required
-                    />
-                    <label for="usersMessage">Message</label>
-                    <textarea
-                        name="usersMessage"
-                        id="usersMessage"
-                        required
-                    ></textarea>
+                <form name="leave_message" class="leave-message">
+                    <div>
+                        <div><label for="usersName">Name</label></div>
+                        <input
+                            type="text"
+                            name="usersName"
+                            id="usersName"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <div><label for="usersEmail">Email</label></div>
+                        <input
+                            type="email"
+                            name="usersEmail"
+                            id="usersEmail"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <div><label for="usersMessage">Message</label></div>
+                        <textarea
+                            name="usersMessage"
+                            id="usersMessage"
+                            required
+                        ></textarea>
+                    </div>
                     <button type="submit" value="submit" class="sbutton">
                         Submit
                     </button>
