@@ -47,7 +47,7 @@
                 <img
                     src="./img/IMG_B9F461A8A800-1.jpeg"
                     width="100px"
-                    alt="picture"
+                    alt="photo"
                 />
             </section>
 
@@ -95,7 +95,7 @@
 
             <section id="leaveMessage">
                 <h2>Leave a Message</h2>
-
+<div class="message-form">
                 <form name="leave_message" class="leave-message">
                     <div>
                         <div><label for="usersName">Name</label></div>
@@ -116,17 +116,21 @@
                         />
                     </div>
                     <div>
-                        <div><label for="usersMessage">Message</label></div>
+                        <div class="message-container"><label for="usersMessage">Message</label></div>
                         <textarea
                             name="usersMessage"
                             id="usersMessage"
                             required
                         ></textarea>
                     </div>
-                    <button type="submit" value="submit" class="sbutton">
+                    <div>
+                        <div><label>&nbsp;</label></div>
+                        <button type="submit" value="submit" class="sbutton">
                         Submit
                     </button>
-                </form>
+
+                    </div>
+                </form></div>
             </section>
 
             <!-- connect -->
