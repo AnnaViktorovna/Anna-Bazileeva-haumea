@@ -26,10 +26,11 @@
                 </ul>
             </nav>
             <!--switch theme-->
-            <div class="theme-switch-wrapper">
+            <div class="theme-switch-wrapper"><span>switch theme</span>
                 <label class="theme-switch" for="checkbox">
                     <input type="checkbox" id="checkbox" />
                     <div class="slider round"></div>
+                    <!-- <span class="sun-icon">/span> -->
                 </label>
             </div>
         </header>
@@ -95,42 +96,48 @@
 
             <section id="leaveMessage">
                 <h2>Leave a Message</h2>
-<div class="message-form">
-                <form name="leave_message" class="leave-message">
-                    <div>
-                        <div><label for="usersName">Name</label></div>
-                        <input
-                            type="text"
-                            name="usersName"
-                            id="usersName"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <div><label for="usersEmail">Email</label></div>
-                        <input
-                            type="email"
-                            name="usersEmail"
-                            id="usersEmail"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <div class="message-container"><label for="usersMessage">Message</label></div>
-                        <textarea
-                            name="usersMessage"
-                            id="usersMessage"
-                            required
-                        ></textarea>
-                    </div>
-                    <div>
-                        <div><label>&nbsp;</label></div>
-                        <button type="submit" value="submit" class="sbutton">
-                        Submit
-                    </button>
-
-                    </div>
-                </form></div>
+                <div class="message-form">
+                    <form name="leave_message" class="leave-message">
+                        <div>
+                            <div><label for="usersName">Name</label></div>
+                            <input
+                                type="text"
+                                name="usersName"
+                                id="usersName"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <div><label for="usersEmail">Email</label></div>
+                            <input
+                                type="email"
+                                name="usersEmail"
+                                id="usersEmail"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <div class="message-container">
+                                <label for="usersMessage">Message</label>
+                            </div>
+                            <textarea
+                                name="usersMessage"
+                                id="usersMessage"
+                                required
+                            ></textarea>
+                        </div>
+                        <div>
+                            <div><label>&nbsp;</label></div>
+                            <button
+                                type="submit"
+                                value="submit"
+                                class="sbutton"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </section>
 
             <!-- connect -->

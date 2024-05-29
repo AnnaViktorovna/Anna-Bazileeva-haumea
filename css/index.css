@@ -83,6 +83,14 @@ input#menu-toggle {
 
 .theme-switch-wrapper {
     display: flex;
+    align-items: center;
+}
+
+.theme-switch-wrapper span {
+    padding-right: 10px;
+    color: white;
+    font-weight: 400;
+    
 }
 
 .theme-switch {
@@ -93,12 +101,27 @@ input#menu-toggle {
     background-color: white;
     border-radius: 20px;
     margin-right: 20px;
+    padding-right: 7px;
 }
 
 .theme-switch input {
     display: none;
 }
+/* 
+.sun-icon {
+    cursor: pointer;
+    transform: translateY(-1%);
+    background-image: url(../img/sun_moon.jpeg);
+    background-size: cover;
 
+    display: inline-block;
+    height: 34px;
+    width: 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding-right: 7px;
+} */
 .slider {
     bottom: 0;
     cursor: pointer;
@@ -107,6 +130,7 @@ input#menu-toggle {
     top: 0;
     transition: 0.4s;
     border-radius: 34px;
+    font-size: 8px;
 }
 
 .slider::before {
@@ -226,14 +250,13 @@ img {
 }
 
 #skills {
-    
     align-items: flex-start;
 }
 
 #skills ul {
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly
+    justify-content: space-evenly;
 }
 
 #skills ul li {
@@ -283,7 +306,7 @@ section {
 .message-form {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 .columns {
     display: flex;
@@ -359,7 +382,7 @@ body.dark-mode {
     }
 
     .grid {
-        grid-template-columns: 2fr 4fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "experience experience"
             "connect connect";
@@ -429,7 +452,7 @@ body.dark-mode {
         gap: 10px;
         align-items: flex-start;
     }
-    
+
     .message-container textarea {
         width: 100%;
         height: 100px;

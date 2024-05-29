@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         editButton.type = "button";
         editButton.addEventListener("click", function () {
             let messageParagraph = newMessage.querySelector("p");
-            if (editButton.innerText === "edit") {
+            if (editButton.innerText === "EDIT") {
                 let currentMessage = messageParagraph.innerText;
                 let newMessageInput = document.createElement("input");
                 newMessageInput.type = "text";
