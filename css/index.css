@@ -1,0 +1,605 @@
+body {
+    background-color: rgb(185, 234, 236);
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+input,
+button,
+textarea {
+    font-family: Roboto;
+    font-size: 20px;
+    padding: 7px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(9, 116, 119);
+}
+
+header nav {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-size: 20px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav li {
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav li a {
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header nav li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 80px 40px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+input#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-wrapper span {
+    padding-right: 10px;
+    color: white;
+    font-weight: 400;
+    
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding-right: 7px;
+}
+
+.theme-switch input {
+    display: none;
+}
+/* 
+.sun-icon {
+    cursor: pointer;
+    transform: translateY(-1%);
+    background-image: url(../img/sun_moon.jpeg);
+    background-size: cover;
+
+    display: inline-block;
+    height: 34px;
+    width: 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding-right: 7px;
+} */
+.slider {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 34px;
+    font-size: 8px;
+}
+
+.slider::before {
+    background-color: rgb(9, 116, 119);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+    border-radius: 50%;
+    transform: translateX(3px);
+}
+
+input:checked + .slider {
+    background-color: #f3e8e8;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+header.dark-mode {
+    background-color: #040404;
+}
+
+.theme-switch.dark-mode .slider::before {
+    background-color: rgb(0, 0, 0);
+}
+
+.dark-mode h2 {
+    color: #ffffe0;
+}
+
+.dark-mode #about a {
+    color: #add8e6;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-list p {
+    margin: 0;
+    color: #333;
+}
+
+.dark-mode .project-list a {
+    color: #90ee90;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 26px;
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+#name {
+    text-transform: uppercase;
+    color: chocolate;
+    text-decoration: wavy;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
+
+#connect {
+    text-align: center;
+}
+
+#connect ul li img {
+    width: 30px;
+    padding-bottom: 10px;
+}
+
+#connect ul {
+    list-style-type: none;
+}
+
+#connect h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#connect ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills {
+    align-items: flex-start;
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#skills ul li {
+    background-color: rgb(240, 239, 216);
+    margin: 10px;
+    border: 2px solid chocolate;
+    list-style-type: none;
+    padding: 10px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+.img {
+    border-radius: 15px;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+#projects ul {
+    text-decoration: none;
+}
+
+#projects ul li {
+    padding-bottom: 20px;
+    list-style-type: none;
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+#experience ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#experience ul li {
+    margin-bottom: 10px;
+}
+
+.message-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.columns {
+    display: flex;
+    gap: 30px;
+}
+
+footer {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(148, 143, 155);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-areas:
+        "experience experience"
+        "connect connect";
+}
+
+.grid > * {
+    border: solid 1px blue;
+}
+
+#message {
+    padding-bottom: 20px;
+}
+
+section h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+label {
+    font-size: 26px;
+    color: chocolate;
+}
+
+.sbutton,
+button {
+    border-radius: 3px;
+    background-color: steelblue;
+    text-transform: uppercase;
+    color: white;
+    min-width: 100px;
+    display: inline-flex;
+    border: none;
+    text-align: center;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+button,
+.sbutton:hover {
+    background-color: rgb(23, 23, 128);
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+@media (min-width: 640px) and (max-width: 789px) {
+    header {
+        align-items: start;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "experience experience"
+            "connect connect";
+    }
+
+    .grid > * {
+        border: none;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #about img {
+        display: none;
+    }
+
+    #connect {
+        margin: 5px;
+    }
+
+    ul {
+        background-color: rgb(47, 64, 79);
+        padding: 14px;
+        color: white;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+        background-color: darkgreen;
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav li a {
+        padding: 10px;
+    }
+
+    .theme-switch-wrapper {
+        margin-left: auto;
+    }
+
+    #messages,
+    #leaveMessage {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .message-container textarea {
+        width: 100%;
+        height: 100px;
+        resize: vertical;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #nav-list {
+        display: none;
+    }
+    #nav-list.show {
+        display: block;
+    }
+}
+
+@media (max-width: 639px) {
+    form {
+        flex-direction: column;
+    }
+    header {
+        align-items: start;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "experience experience"
+            "connect connect";
+    }
+
+    #about img {
+        display: none;
+    }
+
+    #name {
+        color: blue;
+        font-size: 24px;
+    }
+
+    #experience {
+        display: border-box;
+        background-color: rgb(224, 255, 196);
+        font-size: 16px;
+        padding-right: 5px;
+    }
+
+    #experience .columns ul {
+        padding-left: 5px;
+    }
+
+    #messages,
+    #leaveMessage {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    input,
+    textarea,
+    button {
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    header {
+        height: auto;
+        background-color: darkgreen;
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    header nav ul.show {
+        display: block;
+    }
+
+    header nav li a {
+        font-size: 18px;
+    }
+
+    input#menu-toggle:checked + .menu-icon + nav ul {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        cursor: pointer;
+    }
+    #nav-list {
+        display: none;
+    }
+
+    #nav-list.show {
+        display: block;
+    }
+}
